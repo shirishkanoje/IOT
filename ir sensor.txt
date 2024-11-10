@@ -1,0 +1,22 @@
+const int irSensorPin = 7;
+const int ledPin = 13;
+
+void setup() {
+   Serial.begin(9600);
+   pinMode(irSensorPin, INPUT);
+   pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+int sensorValue = digitalRead(irSensorPin);
+Serial.println(sensorValue);
+if(sensorValue == LOW)(
+   Serial.println("object detected!");
+   digitalWrite(ledPin, HIGH);
+}
+
+else{
+digitalWrite(ledPin, LOW);
+}
+delay(1000);
+}
